@@ -1,0 +1,227 @@
+
+body{
+  background-color: #ffe4c4;
+  padding: 50px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: Outfit, sans-serif;
+}
+
+.container{
+  position:relative;
+  padding-bottom: 100px;
+}
+
+#first{
+  font-size: 50px;
+}
+
+#second{
+  font-size: 30px;
+  position: relative;
+}
+
+input{
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  font-family: Outfit, sans-serif;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+  padding: 5px;
+  height: 30px;
+  width: 300px;
+  transition: 0.1s;
+    
+}
+
+.color{
+  border: none;
+  font-size: 14px !important;
+  --ionicon-stroke-width: 32px;
+  color: skyblue;
+  background-color: skyblue;
+  border-radius: 50%;
+  vertical-align: middle;
+  transition: transform 0.2s, color 0.2s;
+  position: relative;
+  top:7px;
+}
+
+/* Changements de couleurs du voyant en fonction de l'état de la tâche
+  Rouge pour tâche en cours
+  Vert pour tâche accomplie
+  Blue pour tâche listée
+*/
+
+.color.while{
+color: red;
+background-color: red;
+}
+
+.color.done{
+color: green;
+background-color: green;
+}
+
+.color.reload{
+  color:skyblue;
+  background-color:skyblue;
+}
+
+form .save{
+  position: relative;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 7px;
+  top: 20px;
+  background-color: white;
+  font-family: Outfit, sans-serif;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  transition: 0.4s ease;
+}
+
+form  .save:active{
+  transform: scale(0.9);
+}
+
+.todo-item{
+  position: relative;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  color: black;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.top {
+  position: relative;
+  display:inline-flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: black;
+  padding-bottom: 40px;
+  border-bottom:1px solid gray;
+}
+
+.bottom {
+ position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: black;
+}
+
+.bottom p {
+  position: relative;
+  font-size:12px;
+  color:gray;
+}
+
+.todo-name {
+  flex: 1;
+  text-align: left;
+  font-size: 18px;
+}
+
+.todo-item form,
+.todo-item a {
+  margin-left: 10px;
+}
+.todo-valide {
+  text-decoration: line-through ;
+}
+
+.todo-name.reloaded{
+  text-decoration:none;
+}
+a button{
+  background:none;
+  border: none;
+}
+
+form button{
+  background: none;
+  border: none;
+}
+
+ion-icon {
+  font-size: 24px !important;
+  --ionicon-stroke-width: 32px;
+  color: black;
+  vertical-align: middle;
+  transition: transform 0.2s, color 0.2s;
+}
+
+
+ion-icon:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+
+/*Changement de display des icônes en fonction de l'état de la tâche
+Utilisation des start_date,end_date pour le display
+*/
+
+.deleteIcon.reseted{
+  display: inline;
+}
+
+.resetIcon, .endIcon{
+  display: none;
+ 
+}
+
+.endIcon.checked{
+    display: inline;
+}
+
+.started{
+  display:none
+}
+
+.penciled,.deleted{
+  display:none;
+}
+
+.endIcon.finished{
+  display:none;
+}
+
+.resetIcon.reseted{
+  display:inline;
+}
+
+
+.endForm,.resetForm{
+ position: relative;
+ width: 33px;
+ height: 33px;
+}
+
+.timeIcon.passed{
+  display:none;
+}
+
+
+.line.checked{
+  display:none;
+}
+
+.date{
+  display: none;
+}
+
+.date.checked{
+  display: inline;
+}
